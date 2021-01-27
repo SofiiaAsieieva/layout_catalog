@@ -1,16 +1,8 @@
 @import "../variable";
 
-@function catalogWidth($columnsCount) {
-  @return $columnsCount * $cardWidth + ($columnsCount - 1) *
-    $cardGap + (2 * $catalogPaddingX);
-}
-
 .container {
   display: grid;
   gap: 0 48px;
-  grid-template-columns: repeat(auto-fill, 200px);
-  margin: 0 auto;
+  grid-template-columns: repeat(4, $cardWidth);
   justify-content: center;
-
-  max-width: catalogWidth(4);
 }
